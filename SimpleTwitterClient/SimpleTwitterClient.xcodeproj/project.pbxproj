@@ -15,6 +15,8 @@
 		D06BD2061CB471C700839FBC /* SimpleTwitterClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BD2051CB471C700839FBC /* SimpleTwitterClientTests.swift */; };
 		D06BD2111CB471C700839FBC /* SimpleTwitterClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BD2101CB471C700839FBC /* SimpleTwitterClientUITests.swift */; };
 		D06BD21F1CB4723200839FBC /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06BD21E1CB4723200839FBC /* Media.xcassets */; };
+		D06BD2211CB473AE00839FBC /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BD2201CB473AE00839FBC /* UIColor-Extension.swift */; };
+		D06BD2231CB473EB00839FBC /* LauncherScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BD2221CB473EB00839FBC /* LauncherScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D06BD2101CB471C700839FBC /* SimpleTwitterClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTwitterClientUITests.swift; sourceTree = "<group>"; };
 		D06BD2121CB471C700839FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D06BD21E1CB4723200839FBC /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Images/Media.xcassets; sourceTree = "<group>"; };
+		D06BD2201CB473AE00839FBC /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		D06BD2221CB473EB00839FBC /* LauncherScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LauncherScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				D06BD1F91CB471C700839FBC /* LaunchScreen.storyboard */,
 				D06BD1FC1CB471C700839FBC /* Info.plist */,
 				D06BD21E1CB4723200839FBC /* Media.xcassets */,
+				D06BD2201CB473AE00839FBC /* UIColor-Extension.swift */,
+				D06BD2221CB473EB00839FBC /* LauncherScreen.swift */,
 			);
 			path = SimpleTwitterClient;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D06BD1F31CB471C700839FBC /* ViewController.swift in Sources */,
+				D06BD2231CB473EB00839FBC /* LauncherScreen.swift in Sources */,
+				D06BD2211CB473AE00839FBC /* UIColor-Extension.swift in Sources */,
 				D06BD1F11CB471C700839FBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

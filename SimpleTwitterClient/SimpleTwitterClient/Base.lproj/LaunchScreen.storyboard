@@ -16,7 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-uP-i3r">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="EpS-9d-5ku"/>
+                                    <constraint firstAttribute="height" constant="240" id="gUQ-4g-pV6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xxb-uP-i3r" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="72" id="BnC-60-cnZ"/>
+                            <constraint firstItem="xxb-uP-i3r" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IOj-px-rGq"/>
+                            <constraint firstItem="xxb-uP-i3r" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hBa-bn-1KH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BnC-60-cnZ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +43,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TwitterLogoBlue" width="1687" height="1687"/>
+    </resources>
 </document>
