@@ -10,6 +10,7 @@ import UIKit
 
 public class LauncherScreen : UIViewController {
     public override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.init(hex: 0x323333)
+        self.view.backgroundColor = UIColor.init(hex: 0xFEFEFE)
+        
     }
 }
