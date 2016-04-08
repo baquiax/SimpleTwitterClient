@@ -13,6 +13,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.96078431372549022" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RGf-qn-Ihl">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -28,7 +29,7 @@
                             <outlet property="delegate" destination="dtS-VL-51s" id="sbt-nP-dMk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="QWu-ej-jWH"/>
+                    <navigationItem key="navigationItem" title="Las Tweets!" id="QWu-ej-jWH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHk-TP-bFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +49,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="tl1-yf-QUP" kind="relationship" relationship="viewControllers" id="zly-Ig-mQ9"/>
-                        <segue destination="nRO-5C-dmS" kind="relationship" relationship="viewControllers" id="zfe-8v-KzE"/>
+                        <segue destination="aBP-Q2-Lnd" kind="relationship" relationship="viewControllers" id="OpX-MO-Kp9"/>
                         <segue destination="Gox-2t-fNx" kind="relationship" relationship="viewControllers" id="c0x-0t-8lC"/>
                     </connections>
                 </tabBarController>
@@ -80,6 +81,58 @@
             </objects>
             <point key="canvasLocation" x="583" y="353"/>
         </scene>
+        <!--Hashtags-->
+        <scene sceneID="dOH-gO-37n">
+            <objects>
+                <tableViewController id="wvr-fv-F5t" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lfu-O1-mqA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X2l-uo-EGf">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X2l-uo-EGf" id="684-fx-hbd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wvr-fv-F5t" id="eIn-jg-1Ke"/>
+                            <outlet property="delegate" destination="wvr-fv-F5t" id="P2F-dv-R8S"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Hashtags" id="ggh-Zs-nrN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqn-j7-gje" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-387" y="1835"/>
+        </scene>
+        <!--Hashtags-->
+        <scene sceneID="nkk-HH-H1G">
+            <objects>
+                <navigationController id="aBP-Q2-Lnd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hashtags" image="hashtag" id="KV3-La-kqv">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uqe-IF-Kj5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wvr-fv-F5t" kind="relationship" relationship="rootViewController" id="RZC-w3-jbd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ON0-wx-DOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-189" y="1221"/>
+        </scene>
         <!--Login-->
         <scene sceneID="ZiL-Tc-I7k">
             <objects>
@@ -100,9 +153,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Login" id="Wgs-QJ-16c">
+                    <tabBarItem key="tabBarItem" title="Login" image="verify" id="Wgs-QJ-16c">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,35 +167,10 @@
             </objects>
             <point key="canvasLocation" x="630" y="1142"/>
         </scene>
-        <!--Hashtags-->
-        <scene sceneID="e7s-Y3-q3Y">
-            <objects>
-                <viewController id="nRO-5C-dmS" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HEJ-wg-0re"/>
-                        <viewControllerLayoutGuide type="bottom" id="jq0-Gi-4fU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ICV-d5-YcD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Hashtags" image="hashtag" id="Wjk-dH-04w">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RBJ-BP-hkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-189" y="1112"/>
-        </scene>
     </scenes>
     <resources>
         <image name="hashtag" width="32" height="32"/>
         <image name="trending" width="32" height="32"/>
+        <image name="verify" width="32" height="32"/>
     </resources>
 </document>
