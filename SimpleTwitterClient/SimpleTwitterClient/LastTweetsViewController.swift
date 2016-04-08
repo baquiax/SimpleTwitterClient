@@ -11,6 +11,7 @@ import UIKit
 
 public class LastTweetsViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
     var urlSession: NSURLSession!
     var data : NSArray = NSArray()
@@ -20,7 +21,15 @@ public class LastTweetsViewController : UIViewController, UITableViewDelegate, U
         self.urlSession = NSURLSession(configuration: configuration)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.loader.hidesWhenStopped = true
         
+        loadData()
+    }
+    
+    
+    func loadData () {
+        self.loader.hidden = false
+        self.loader.startAnimating()
         if let user = NSUserDefaults.standardUserDefaults().objectForKey("user") {
             print("UserId: ", user.objectForKey("user_id")!)
             TwitterClient.getTwitterClient().client.get("https://api.twitter.com/1.1/statuses/home_timeline.json", parameters: ["count" : 100], headers: nil, success: { data, response in
@@ -32,9 +41,12 @@ public class LastTweetsViewController : UIViewController, UITableViewDelegate, U
                     self.data = NSArray()
                 }
                 self.tableView.reloadData()
+                self.loader.stopAnimating()
                 }, failure: { (error) -> Void in
             })
         }
+
+        
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -84,5 +96,10 @@ public class LastTweetsViewController : UIViewController, UITableViewDelegate, U
             print("Canceling download!")
             cell.dataTask?.cancel()
         }
+    }
+    
+    @IBAction func afterLongPress(sender: UILongPressGestureRecognizer) {
+        print("Long press has been succed!")
+        self.loadData()
     }
 }
