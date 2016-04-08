@@ -41,6 +41,7 @@ public class LastTweetsViewController : UIViewController, UITableViewDelegate, U
                     self.data = NSArray()
                 }
                 self.tableView.reloadData()
+                self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
                 self.loader.stopAnimating()
                 }, failure: { (error) -> Void in
             })
