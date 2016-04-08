@@ -49,6 +49,7 @@
                     <connections>
                         <segue destination="tl1-yf-QUP" kind="relationship" relationship="viewControllers" id="zly-Ig-mQ9"/>
                         <segue destination="nRO-5C-dmS" kind="relationship" relationship="viewControllers" id="zfe-8v-KzE"/>
+                        <segue destination="Gox-2t-fNx" kind="relationship" relationship="viewControllers" id="c0x-0t-8lC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZA-eV-umJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,6 +79,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2N-lj-uY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583" y="353"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="ZiL-Tc-I7k">
+            <objects>
+                <viewController id="Gox-2t-fNx" customClass="LoginViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kdk-pO-2L9"/>
+                        <viewControllerLayoutGuide type="bottom" id="wNo-9C-6g8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RtR-Sn-NPb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTG-bM-VOg">
+                                <rect key="frame" x="153" y="174" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loginWithTwitter:" destination="Gox-2t-fNx" eventType="touchUpInside" id="Jkq-00-xoa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Login" id="Wgs-QJ-16c">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0g-Y8-30N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="1142"/>
         </scene>
         <!--Hashtags-->
         <scene sceneID="e7s-Y3-q3Y">

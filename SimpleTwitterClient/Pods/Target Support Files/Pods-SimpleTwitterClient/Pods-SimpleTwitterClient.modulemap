@@ -1,0 +1,6 @@
+framework module Pods_SimpleTwitterClient {
+  umbrella header "Pods-SimpleTwitterClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
