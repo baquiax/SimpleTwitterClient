@@ -8,30 +8,16 @@
         <!--Last tweet-->
         <scene sceneID="Me6-uj-dng">
             <objects>
-                <tableViewController title="Last tweet" id="dtS-VL-51s" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ggZ-gx-Rob">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" red="0.96078431372549022" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RGf-qn-Ihl">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RGf-qn-Ihl" id="Wrn-im-HHk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="dtS-VL-51s" id="HhT-ca-m7t"/>
-                            <outlet property="delegate" destination="dtS-VL-51s" id="sbt-nP-dMk"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Las Tweets!" id="QWu-ej-jWH"/>
-                </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHk-TP-bFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="G1w-h1-h6z">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <navigationItem title="Last Tweets!" id="Fcu-d9-CKw"/>
+                <tableViewController title="Last tweet" id="dtS-VL-51s" customClass="LastTweetsViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Last Tweets!" id="QWu-ej-jWH"/>
+                </tableViewController>
             </objects>
             <point key="canvasLocation" x="1371" y="353"/>
         </scene>
@@ -90,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X2l-uo-EGf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HashTag" id="X2l-uo-EGf">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X2l-uo-EGf" id="684-fx-hbd">
@@ -108,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqn-j7-gje" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-387" y="1835"/>
+            <point key="canvasLocation" x="-189" y="1996"/>
         </scene>
         <!--Hashtags-->
         <scene sceneID="nkk-HH-H1G">
