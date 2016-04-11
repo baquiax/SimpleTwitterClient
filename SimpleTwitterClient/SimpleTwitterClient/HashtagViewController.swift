@@ -13,6 +13,7 @@ class HashtagViewController : LastTweetsViewController , UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var textToSearch = ""
+    var timer : NSTimer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class HashtagViewController : LastTweetsViewController , UISearchBarDelegate {
         self.loader.startAnimating()
         if let _ = NSUserDefaults.standardUserDefaults().objectForKey("user") {
             if (self.textToSearch.isEqual("")) {
+                self.data = NSArray()
+                self.tableView.reloadData()
                 self.loader.stopAnimating()
                 return
             }
@@ -45,9 +48,12 @@ class HashtagViewController : LastTweetsViewController , UISearchBarDelegate {
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
         self.textToSearch = searchText
-        loadData()
+        print(searchText)
+        if (self.timer != nil) {
+            self.timer?.invalidate()
+        }
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "loadData", userInfo: nil, repeats: false)
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -79,10 +85,7 @@ class HashtagViewController : LastTweetsViewController , UISearchBarDelegate {
         if let text = item.objectForKey("text") as? String {
             cell.tweet.text = text
         }
-        
-        
         return cell
     }
-    
     
 }
