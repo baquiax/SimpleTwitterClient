@@ -33,8 +33,6 @@ public class LastTweetsViewController : UIViewController, UITableViewDelegate, U
         if let user = NSUserDefaults.standardUserDefaults().objectForKey("user") {
             print("UserId: ", user.objectForKey("user_id")!)
             TwitterClient.getTwitterClient().client.get("https://api.twitter.com/1.1/statuses/home_timeline.json", parameters: ["count" : 100], headers: nil, success: { data, response in
-                //let datastring = NSString(data: data, encoding: NSUTF8StringEncoding)
-                //print(datastring)
                 do {
                     self.data = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as! NSArray
                 } catch {
@@ -45,9 +43,9 @@ public class LastTweetsViewController : UIViewController, UITableViewDelegate, U
                 self.loader.stopAnimating()
                 }, failure: { (error) -> Void in
             })
+        } else {
+            self.loader.stopAnimating()
         }
-
-        
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
